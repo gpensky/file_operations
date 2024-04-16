@@ -2,10 +2,6 @@
 
 from setuptools import setup, find_packages
 
-# Read the contents of requirements.txt
-with open("requirements.txt", encoding="utf8") as f:
-    required_packages = f.read().splitlines()
-
 setup(
     name="file_operations",
     version="0.1.0",
@@ -16,6 +12,16 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/gpensky/file-operations",
     packages=find_packages(),
-    install_requires=required_packages,
+    install_requires=[
+        "git+https://github.com/openai/whisper.git",
+        "pandas==1.3.4",
+        "textract==1.5.0",
+        "xmltodict==0.13.0",
+        "PyPDF2==3.0.1",
+        "pdfminer",
+        "pdfplumber==0.10.3",
+        "pdf2image==1.17.0",
+        "pytesseract==0.3.10",
+    ],
     python_requires=">=3.9",
 )
