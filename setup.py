@@ -13,7 +13,7 @@ setup(
     url="https://github.com/gpensky/file-operations",
     packages=find_packages(),
     install_requires=[
-        "whisper @ git+https://git@github.com/openai/whisper.git#egg=whisper",
+        "openai-whisper @ git+https://git@github.com/openai/whisper.git#egg=openai-whisper",
         "pandas==1.3.4",
         "textract==1.5.0",
         "xmltodict==0.13.0",
