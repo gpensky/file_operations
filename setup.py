@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="file_operations",
-    version="0.1.0",
+    version="0.1.1",
     author="Gabriel Pensky",
     author_email="gabriel.pensky@gmail.com",
     description="Collection of multiple file operation functions with the goal of facilitating the use and convertion of multiple file types for machine learning applications.",
