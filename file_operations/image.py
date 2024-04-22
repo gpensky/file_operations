@@ -4,6 +4,10 @@ from PIL import Image
 import pytesseract
 
 
+# File -> Python Object
+# -----------------------------------------------------------------------------
+
+
 def image2str(image_path: str, lang: str = "por") -> str:
     """Read text from images
 
