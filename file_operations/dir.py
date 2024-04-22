@@ -4,8 +4,11 @@ operations in directories."""
 import os
 import shutil
 
+
 # Directory -> Python Object
 # -----------------------------------------------------------------------------
+
+
 def dir2dict(folder_path: str) -> dict:
     """Get dict of all files in folder
 
@@ -55,6 +58,8 @@ def dir2list(
 
 # Other file system utilities
 # -----------------------------------------------------------------------------
+
+
 def file_check(file_path: str) -> bool:
     """Checks if file exists.
 
