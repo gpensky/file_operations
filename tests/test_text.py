@@ -59,10 +59,10 @@ def test_txt2str(test_file_paths: dict, expected_result: str):
 
 def test_html2md():
     html_content = "<h1>Hello, World!</h1>"
-    expected_md = "# Hello, World!"
+    expected_md = "# Hello, World!\n"
     assert html2md(html_content) == expected_md
 
 def test_md2html():
     md_content = "# Hello, World!"
-    expected_html = "<h1>Hello, World!</h1>"
+    expected_html = """<h1 id="hello-world">Hello, World!</h1>\n"""
     assert md2html(md_content) == expected_html

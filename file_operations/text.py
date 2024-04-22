@@ -52,7 +52,7 @@ def html2md(data: str) -> str:
         str: markdown string
     """
 
-    return pandoc.write(pandoc.read(data, format="html"), format="markdown")
+    return pandoc.write(pandoc.read(data, format="html"), format="markdown", options=["--atx-headers"])
 
 
 def md2html(data: str) -> str:
