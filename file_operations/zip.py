@@ -4,8 +4,11 @@ import shutil
 import zipfile
 import os
 
+
 # File -> Directory
 # -----------------------------------------------------------------------------
+
+
 def zip2dir(file_path: str, output_folder_path: str) -> None:
     """Extract zip file contents to folder.
 

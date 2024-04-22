@@ -3,11 +3,14 @@
 from typing import Union
 import whisper
 
+
 # File -> Python Object
 # -----------------------------------------------------------------------------
 
 
-def audio2str(file_path: str, language: Union[str, None] = None, model_name: str = "tiny") -> str:
+def audio2str(
+    file_path: str, language: Union[str, None] = None, model_name: str = "tiny"
+) -> str:
     """Transcribes audio and returns only the text. Uses `whisper` to transcribe: see
     [documentation](https://github.com/openai/whisper).
 
