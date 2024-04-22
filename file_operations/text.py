@@ -1,5 +1,7 @@
 """text.py - This module provides functions to read/write text files."""
 
+import pandoc
+
 # Python Object -> File
 # -----------------------------------------------------------------------------
 
@@ -34,3 +36,33 @@ def txt2str(file_path: str, encoding: str = "utf8") -> str:
 
     with open(file_path, "r", encoding=encoding) as file:
         return file.read()
+
+
+# String -> String
+# -----------------------------------------------------------------------------
+
+
+def html2md(data: str) -> str:
+    """Converts html to markdown
+
+    Args:
+        data (str): html string
+
+    Returns:
+        str: markdown string
+    """
+
+    return pandoc.write(pandoc.read(data, format="html"), format="markdown")
+
+
+def md2html(data: str) -> str:
+    """Converts markdown to html
+
+    Args:
+        data (str): markdown string
+
+    Returns:
+        str: html string
+    """
+
+    return pandoc.write(pandoc.read(data, format="markdown"), format="html")

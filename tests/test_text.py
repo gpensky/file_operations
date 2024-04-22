@@ -3,7 +3,7 @@
 import os
 import pytest
 
-from file_operations.text import str2txt, txt2str
+from file_operations.text import str2txt, txt2str, html2md, md2html
 
 
 @pytest.fixture(name="test_file_paths")
@@ -56,3 +56,13 @@ def test_txt2str(test_file_paths: dict, expected_result: str):
 
     result = txt2str(test_file_paths["01"])
     assert result == expected_result
+
+def test_html2md():
+    html_content = "<h1>Hello, World!</h1>"
+    expected_md = "# Hello, World!"
+    assert html2md(html_content) == expected_md
+
+def test_md2html():
+    md_content = "# Hello, World!"
+    expected_html = "<h1>Hello, World!</h1>"
+    assert md2html(md_content) == expected_html
