@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="file_operations",
-    version="0.2.0",
+    version="0.2.1",
     author="Gabriel Pensky",
     author_email="gabriel.pensky@gmail.com",
     description="Collection of multiple file operation functions with the goal of facilitating the use and convertion of multiple file types for machine learning applications.",
@@ -22,6 +22,7 @@ setup(
         "pdfplumber==0.10.3",
         "pdf2image==1.17.0",
         "pytesseract==0.3.10",
+        "pandoc==2.3",
     ],
     python_requires=">=3.9",
 )
